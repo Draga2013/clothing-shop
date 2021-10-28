@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/shopping.css}"/>
+  <title>Registration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="card">
+  <form action="#" th:action="@{/order}" th:object="${order}" method="post">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <input type="hidden" th:field="*{id}" class="form-control" id="productId">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="name" class="col-form-label">Quantity</label>
+        <input type="text" th:field="*{quantity}" class="form-control" id="name" placeholder="Name">
+      </div>
+    </div>
+
+
+
+    <!-- <div class="row">
+       <div class="form-group col-md-6">
+         <label for="categoryId" class="col-form-label">categoryId</label>
+         <input type="text" th:field="*{categoryId}" class="form-control" id="categoryId" placeholder="categoryId">
+         <span th:if="${#fields.hasErrors('categoryId')}" th:errors="*{categoryId}" class="text-danger"></span>
+       </div>
+     </div>-->
+
+
+    <div class="row">
+      <div class="col-md-6 mt-5">
+        <input type="submit" class="btn btn-primary" value="Order">
+      </div>
+    </div>
+  </form>
+<!--  <div class="row">-->
+<!--    <div class="col-md-8 cart">-->
+<!--      <div class="title">-->
+<!--        <div class="row">-->
+<!--          <div class="col">-->
+<!--            <h4><b>Shopping Cart</b></h4>-->
+<!--          </div>-->
+<!--          <div class="col align-self-center text-right text-muted">3 items</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="row border-top border-bottom">-->
+<!--        <div class="row main align-items-center">-->
+<!--          <div class="col-2"><img class="img-fluid" src="https://i.imgur.com/1GrakTl.jpg"></div>-->
+<!--          <div class="col">-->
+<!--            <div class="row text-muted">Shirt</div>-->
+<!--            <div class="row">Cotton T-shirt</div>-->
+<!--          </div>-->
+<!--          <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div>-->
+<!--          <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--     -->
+<!--      -->
+<!--      <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>-->
+<!--    </div>-->
+<!--    <div class="col-md-4 summary">-->
+<!--      <div>-->
+<!--        <h5><b>Summary</b></h5>-->
+<!--      </div>-->
+<!--      <hr>-->
+<!--      <div class="row">-->
+<!--        <div class="col" style="padding-left:0;">ITEMS 3</div>-->
+<!--        <div class="col text-right">&euro; 132.00</div>-->
+<!--      </div>-->
+<!--      <form>-->
+<!--        <p>SHIPPING</p> <select>-->
+<!--        <option class="text-muted">Standard-Delivery- &euro;5.00</option>-->
+<!--      </select>-->
+<!--        <p>GIVE CODE</p> <input id="code" placeholder="Enter your code">-->
+<!--      </form>-->
+<!--      <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">-->
+<!--        <div class="col">TOTAL PRICE</div>-->
+<!--        <div class="col text-right">&euro; 137.00</div>-->
+<!--      </div> <button class="btn">CHECKOUT</button>-->
+<!--    </div>-->
+<!--  </div>-->
+</div>
+</body>
+</html>
