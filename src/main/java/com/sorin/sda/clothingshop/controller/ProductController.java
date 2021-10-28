@@ -49,7 +49,7 @@ public class ProductController {
 
     @GetMapping("/product-list")
     public String showProductListPage(Model model) {
-        model.addAttribute("products", productService.getAll());
+        model.addAttribute("products", productRepository.findAllBySize_Id(1L));
         return "productList";
     }
 

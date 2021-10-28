@@ -33,7 +33,7 @@ public class ProductService {
     }
 
     public List<Product> findProductsByCategoryName(String categoryName){
-        List<Product> products = productRepository.findAllByCategory_CategoryName(categoryName);
+        List<Product> products = productRepository.findAllByCategory_CategoryNameAndSize_Id(categoryName,1L);
         return products;
     }
     public void save(ProductDTO productDTO){

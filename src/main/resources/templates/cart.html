@@ -64,7 +64,7 @@
     <div class="card-body">
         <h5 th:text="'Nume: '+${product.name}" class="card-title"></h5>
         <p th:text="'Descriere: '+${product.description}" class="card-text"></p>
-        <p th:text="'Pret: '+${product.price}"></p>
+        <p th:text="'Pret: '+${product.price}+' RON'"></p>
         <form th:action="@{/cart/add}" method="post" th:object="${cartItem}">
             <input type="hidden" name="productId" th:field="*{productId}">
             <label for="size">Selecteaza marimea</label>
